@@ -11,7 +11,6 @@ const getAll = async (req, res) =>
     });
 }
 
-
 const getById = async (req, res) =>
 {
     const data = await schema.findById(req.params.id);
@@ -49,7 +48,7 @@ const create = async (req, res) =>
         res.status(400).send({
             status: 400,
             message: 'Action could not be completed',
-            data: data
+            data: e
         })
     }
 }

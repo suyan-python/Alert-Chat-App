@@ -10,13 +10,15 @@ import Form from "./components/form/Form";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
-function App() {
+function App()
+{
   const [verify, setVerify] = useState(false);
 
-  if (verify === true) {
+  if (verify === true)
+  {
     return (
       <>
-        <PreLoader />
+        {/* <PreLoader /> */}
         <div className="mx-28">
           <Router>
             <Navbar />
@@ -39,10 +41,12 @@ function App() {
         </div>
       </>
     );
-  } else {
+  } else
+  {
     return (
       <Form
-        props={() => {
+        props={() =>
+        {
           setVerify(true);
         }}
       />

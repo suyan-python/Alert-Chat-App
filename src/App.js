@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 import PreLoader from "./components/PreLoader";
 import Civil from "./components/departments/Civil";
 import Computer from "./components/departments/Computer";
@@ -7,6 +8,7 @@ import Faculties from "./components/faculty/Faculties";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Form from "./components/form/Form";
+import DarkMode from "./components/DarkMode/DarkMode";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
@@ -44,12 +46,14 @@ function App()
   } else
   {
     return (
-      <Form
-        props={() =>
-        {
-          setVerify(true);
-        }}
-      />
+      <div className="Log flex-col justify-center text-center">
+        <Form
+          props={() =>
+          {
+            setVerify(true);
+          }}
+        />
+      </div>
     );
   }
 }

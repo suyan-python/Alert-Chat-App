@@ -1,18 +1,38 @@
 import { useForm } from "@mantine/form";
-import { randomId } from "@mantine/hooks";
+import axios from "axios";
 
 function Form({ props }) {
+  const tryLogin = async () => {
+    const name = form.getValues().name;
+    const password = form.getValues().password;
+    console.log(form.getValues());
+
+    try {
+      const res = await axios.post("http://localhost:8080/auth/login", {
+        username: name,
+        password: password,
+      });
+      console.log(res);
+
+      if (res.status == 200) {
+        props();
+      }
+    } catch (e) {
+      alert("User Invalid");
+    }
+  };
+
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
       name: "",
-      email: "",
+      password: "",
     },
   });
 
   return (
     <div className="flex-row text-center mt-72">
-      <div className="text-area">Login</div>
+      <div className="text-area mb-2">Login</div>
       <div className="form-area">
         <div className="name">
           <input
@@ -28,13 +48,13 @@ function Form({ props }) {
             label="Password"
             type="password"
             placeholder="Password"
-            key={form.key("email")}
-            {...form.getInputProps("email")}
+            key={form.key("password")}
+            {...form.getInputProps("password")}
           />
         </div>
       </div>
 
-      <div justify="center" mt="xl">
+      {/* <div justify="center" mt="xl">
         <button
           onClick={() =>
             form.setValues({
@@ -45,10 +65,10 @@ function Form({ props }) {
         >
           Generate random
         </button>
-      </div>
+      </div> */}
       <button
         onClick={props}
-        className="bg-red-500 text-white px-2 py-1 rounded-xl"
+        className="bg-red-500 text-white px-2 py-1 my-2 rounded-xl"
       >
         Submit
       </button>

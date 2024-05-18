@@ -23,7 +23,7 @@ app.listen(8080, async (req, res) =>
     console.log('App is running on port 8080');
     try
     {
-        await mongoose.connect("mongodb+srv://admin:admin@expense.nvaollm.mongodb.net/?retryWrites=true&w=majority&appName=expense")
+        await mongoose.connect("mongodb+srv://admin:admin@cluster0.wtmdchg.mongodb.net/User?retryWrites=true&w=majority&appName=Cluster0")
         console.log('Database is connected')
     } catch (e)
     {

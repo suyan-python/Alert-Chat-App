@@ -14,11 +14,31 @@ function Form({ props }) {
       });
       console.log(res);
 
-      if (res.status == 200) {
+      if (res.status === 200) {
         props();
       }
     } catch (e) {
       alert("User Invalid");
+    }
+  };
+
+  const trySignup = async () => {
+    const name = form.getValues().name;
+    const password = form.getValues().password;
+    console.log(name);
+
+    try {
+      const res = await axios.post("http://localhost:8080/auth/sign-up", {
+        username: name,
+        password: password,
+      });
+      // console.log(res);
+
+      if (res.status === 200) {
+        alert("SignUp Success");
+      }
+    } catch (e) {
+      alert("SignUp Error");
     }
   };
 
@@ -66,12 +86,24 @@ function Form({ props }) {
           Generate random
         </button>
       </div> */}
-      <button
-        onClick={props}
-        className="bg-red-500 text-white px-2 py-1 my-2 rounded-xl"
-      >
-        Submit
-      </button>
+      <div className="authentication gap-2 flex justify-center">
+        <div className="login">
+          <button
+            onClick={tryLogin}
+            className="bg-red-500 text-white px-2 py-1 my-2 rounded-xl"
+          >
+            Login
+          </button>
+        </div>
+        <div className="signUp">
+          <button
+            onClick={trySignup}
+            className="bg-red-500 text-white px-2 py-1 my-2 rounded-xl"
+          >
+            SignUp
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

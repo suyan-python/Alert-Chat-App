@@ -17,25 +17,25 @@ function Navbar()
           </Link>
         </div>
         <div className="text-area flex gap-4">
-          <div className="item hover:scale-110">
+          <div className="item">
             <Link
-              className="hover:bg-blue-600 p-1 rounded transition  hover:text-white text-blue-600"
+              className="hover:bg-blue-600 p-1 rounded transition  hover:text-white text-blue-600 hover:scale-110"
               to="../departments/Civil"
             >
               Civil
             </Link>
           </div>
-          <div className="item hover:scale-110">
+          <div className="item">
             <Link
-              className="hover:bg-green-600 p-1 rounded transition  hover:text-white text-green-600"
+              className="hover:bg-green-600 p-1 rounded transition  hover:text-white text-green-600 hover:scale-125"
               to="../departments/Computer"
             >
               Computer
             </Link>
           </div>
-          <div className="item hover:scale-110">
+          <div className="item">
             <Link
-              className="hover:bg-pink-600 p-1 rounded transition  hover:text-white text-pink-600"
+              className="hover:bg-pink-600 p-1 rounded transition  hover:text-white text-pink-600 hover:scale-125"
               to="../departments/Architect"
             >
               Architect

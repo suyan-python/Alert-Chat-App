@@ -47,18 +47,24 @@ const login = async (req, res) =>
 
 const signup = async (req, res) =>
 {
+    console.log('Reach');
     try
     {
         const userData = {
             username: req.body.username,
-            phone: req.body.phone,
-            email: req.body.email,
             password: req.body.password,
-            userType: req.body.userType,
-            role: req.body.role,
+            // phone: req.body.phone,
+            // email: req.body.email,
+            // userType: req.body.userType,
+            // role: req.body.role,
         };
 
+        console.log(userData)
+
         userData.password = await bcrypt.hash(req.body.password, 10);
+
+
+        console.log(userData)
         const data = await schema.create(userData);
         res.send({
             status: 201,
@@ -67,11 +73,13 @@ const signup = async (req, res) =>
         })
     } catch (e)
     {
+        console.log("Error is ", e)
         res.status(400).send({
             status: 400,
             message: 'Action could not be completed',
             data: e
         })
+
     }
 }
 

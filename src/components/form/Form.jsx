@@ -16,8 +16,8 @@ function Form({ props }) {
       console.log(res);
 
       if (res.status === 200) {
-        // props();
-        document.location = "/";
+        props();
+        // document.location = "/Home";
       }
     } catch (e) {
       alert("User Invalid");

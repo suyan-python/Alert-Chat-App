@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DarkMode from "../DarkMode/DarkMode";
+import logo from '../ima/rate.svg'
 
 function Navbar()
 {
@@ -13,7 +14,7 @@ function Navbar()
       <div className="items flex justify-between py-3">
         <div className="image-area">
           <Link className="hover:text-orange-400" to="/Home">
-            Rate.com
+            <img src={logo} alt="" />
           </Link>
         </div>
         <div className="text-area flex gap-4">

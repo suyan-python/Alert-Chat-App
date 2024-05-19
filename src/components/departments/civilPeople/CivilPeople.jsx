@@ -18,7 +18,11 @@ export default function CivilPeople() {
           <HoverRating />
         </div>
         <div className="input-section">
-          <input type="text" placeholder="FeedBack" />
+          <input
+            type="text"
+            placeholder="FeedBack"
+            className="shadow rounded my-3"
+          />
         </div>
         <div className="comment-section">
           <div className="submit-sec">
@@ -41,7 +45,11 @@ export default function CivilPeople() {
           <HoverRating />
         </div>
         <div className="input-section">
-          <input type="text" placeholder="FeedBack" />
+          <input
+            type="text"
+            placeholder="FeedBack"
+            className="shadow rounded my-3"
+          />
         </div>
         <div className="comment-section">
           <div className="submit-sec">

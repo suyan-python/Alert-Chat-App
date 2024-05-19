@@ -2,25 +2,24 @@ import { useForm } from "@mantine/form";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-function Form({ props }) {
-  const tryLogin = async () => {
+function SignUp({ props }) {
+  const trySignup = async () => {
     const name = form.getValues().name;
     const password = form.getValues().password;
-    console.log(form.getValues());
+    console.log(name);
 
     try {
-      const res = await axios.post("http://localhost:8080/auth/login", {
+      const res = await axios.post("http://localhost:8080/auth/sign-up", {
         username: name,
         password: password,
       });
-      console.log(res);
+      // console.log(res);
 
       if (res.status === 200) {
-        // props();
-        document.location = "/";
+        alert("SignUp Success");
       }
     } catch (e) {
-      alert("User Invalid");
+      alert("SignUp Error");
     }
   };
 
@@ -34,7 +33,7 @@ function Form({ props }) {
 
   return (
     <div className="flex-row text-center mt-72">
-      <div className="text-area mb-2">SignIn</div>
+      <div className="text-area mb-2">Sign-Up</div>
       <div className="form-area">
         <div className="name">
           <input
@@ -56,13 +55,13 @@ function Form({ props }) {
         </div>
       </div>
 
-      <div className="authentication gap-2 justify-center">
-        <div className="login">
+      <div className="authentication gap-2  justify-center">
+        <div className="signUp">
           <button
-            onClick={tryLogin}
+            onClick={trySignup}
             className="bg-red-500 text-white px-2 py-1 my-2 rounded-xl"
           >
-            SignIn
+            <Link to={"/"}>SignUp</Link>
           </button>
         </div>
         <div className="back">
@@ -73,4 +72,4 @@ function Form({ props }) {
   );
 }
 
-export default Form;
+export default SignUp;

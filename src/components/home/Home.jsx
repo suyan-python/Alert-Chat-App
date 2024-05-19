@@ -48,7 +48,9 @@ function Home(props) {
           </Link>
         </div>
         <div className="db-area bg-cyan-700 h-80 text-center text-4xl text-white my-5 hover:bg-white hover:text-cyan-700 transition flex items-center justify-center rounded-xl hover:shadow-xl">
-          <Link className=" transition hover:scale-110">Teacher Details</Link>
+          <Link className=" transition hover:scale-110" to={"/TeacherDetails"}>
+            Teacher Details
+          </Link>
         </div>
       </div>
     </>

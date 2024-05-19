@@ -5,7 +5,7 @@ function Faculties() {
   return (
     <div>
       <div className="back">
-        <Link to="/">Back</Link>
+        <Link to="/Home">Back</Link>
       </div>
 
       <div className="text-area text-center mt-3 text-5xl font-bold">

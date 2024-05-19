@@ -9,9 +9,13 @@ import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Form from "./components/form/Form";
 import DarkMode from "./components/DarkMode/DarkMode";
+import Verify from "./components/verification/Verify";
+import SignUp from "./components/form/SignUp";
+import TeacherDetails from "./components/teacher/TeacherDetails";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
+
 function App()
 {
   const [verify, setVerify] = useState(false);
@@ -25,7 +29,7 @@ function App()
           <Router>
             <Navbar />
             <Routes>
-              <Route exact path="/" element={<Home />} />
+              <Route exact path="/Home" element={<Home />} />
               <Route exact path="/faculty/Faculties" element={<Faculties />} />
               <Route exact path="/departments/Civil" element={<Civil />} />
               <Route
@@ -38,6 +42,13 @@ function App()
                 path="/departments/Architect"
                 element={<Architect />}
               />
+
+              <Route
+                exact
+                path="/TeacherDetails"
+                element={<TeacherDetails />}
+              />
+
             </Routes>
           </Router>
         </div>
@@ -47,12 +58,21 @@ function App()
   {
     return (
       <div className="Log flex-col justify-center text-center">
-        <Form
-          props={() =>
-          {
-            setVerify(true);
-          }}
-        />
+
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<Verify />} />
+            <Route exact path="/SignUp" element={<SignUp />} />
+            <Route exact path="/SignIn" element={<Form
+              props={() =>
+              {
+                setVerify(true);
+              }}
+            />} />
+          </Routes>
+        </Router>
+
+
       </div>
     );
   }

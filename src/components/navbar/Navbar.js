@@ -12,7 +12,7 @@ function Navbar()
     <nav className="header mt-4">
       <div className="items flex justify-between py-3">
         <div className="image-area">
-          <Link className="hover:text-orange-400" to="/">
+          <Link className="hover:text-orange-400" to="/Home">
             Rate.com
           </Link>
         </div>

@@ -8,12 +8,6 @@ export default function Architect() {
       <div className="back">
         <Link to={"/faculty/Faculties"}>Back</Link>
       </div>
-      <div className="text-area">
-        <div className="welcome">Architect Section</div>
-        <div className="detail flex">
-          <ArchiPeople />
-        </div>
-      </div>
       <div className="direction flex justify-center gap-8 my-8 text-xl text-white">
         <div className="previous">
           <Link to={"/departments/Computer"}>
@@ -28,6 +22,12 @@ export default function Architect() {
               Next
             </button>
           </Link>
+        </div>
+      </div>
+      <div className="text-area">
+        <div className="welcome">Architect Section</div>
+        <div className="detail flex">
+          <ArchiPeople />
         </div>
       </div>
     </>

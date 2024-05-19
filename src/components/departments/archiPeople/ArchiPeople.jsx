@@ -18,7 +18,11 @@ export default function ArchiPeople() {
           <HoverRating />
         </div>
         <div className="input-section">
-          <input type="text" placeholder="FeedBack" />
+          <input
+            type="text"
+            placeholder="FeedBack"
+            className="shadow rounded my-3"
+          />
         </div>
         <div className="comment-section">
           <div className="submit-sec">
@@ -29,23 +33,27 @@ export default function ArchiPeople() {
         </div>
       </div>
 
-      <div className="person1">
-        <div className="image-area">
+      <div className="person1 text-center h-96 border">
+        <div className="image-area flex justify-center">
           <img className="w-2/4 rounded-xl shadow-lg" src={Samita} alt="" />
         </div>
         <div className="text-area py-3">
           <div className="name">Name: Samita Shrestha</div>
           <div className="age">Age: 33</div>
         </div>
-        <div className="rating-area">
+        <div className="rating-area flex justify-center">
           <HoverRating />
         </div>
         <div className="input-section">
-          <input type="text" placeholder="FeedBack" />
+          <input
+            type="text"
+            placeholder="FeedBack"
+            className="shadow rounded my-3"
+          />
         </div>
         <div className="comment-section">
           <div className="submit-sec">
-            <button className="bg-orange-500 shadow-md p-1 rounded-md text-white hover:scale-110 hover:bg-orange-700 transition">
+            <button className="bg-orange-500 shadow-md p-1 rounded-md text-white hover:scale-110 hover:bg-orange-700 transition w-72">
               Submit
             </button>
           </div>

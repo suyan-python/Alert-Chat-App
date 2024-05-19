@@ -8,12 +8,6 @@ export default function Civil() {
       <div className="back">
         <Link to={"/faculty/Faculties"}>Back</Link>
       </div>
-      <div className="text-area">
-        <div className="welcome">Civil Section</div>
-        <div className="detail flex">
-          <CivilPeople />
-        </div>
-      </div>
       <div className="direction flex justify-center gap-8 my-8 text-xl text-white">
         <div className="previous">
           <Link to={"/departments/Architect"}>
@@ -28,6 +22,12 @@ export default function Civil() {
               Next
             </button>
           </Link>
+        </div>
+      </div>
+      <div className="text-area">
+        <div className="welcome">Civil Section</div>
+        <div className="detail flex">
+          <CivilPeople />
         </div>
       </div>
     </>

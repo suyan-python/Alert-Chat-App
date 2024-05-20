@@ -29,7 +29,7 @@ function App()
           <Router>
             <Navbar />
             <Routes>
-              <Route exact path="/Home" element={<Home />} />
+              <Route path="/Home" element={<Home />} />
               <Route exact path="/faculty/Faculties" element={<Faculties />} />
               <Route exact path="/departments/Civil" element={<Civil />} />
               <Route

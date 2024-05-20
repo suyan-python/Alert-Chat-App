@@ -1,8 +1,9 @@
 import { useForm } from "@mantine/form";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Form({ props }) {
+  const navigate = useNavigate();
   const tryLogin = async () => {
     const name = form.getValues().name;
     const password = form.getValues().password;
@@ -17,6 +18,8 @@ function Form({ props }) {
 
       if (res.status === 200) {
         props();
+        // navigate("/Home");
+
         // document.location = "/Home";
       }
     } catch (e) {

@@ -17,6 +17,8 @@ function Form({ props }) {
       console.log(res);
 
       if (res.status === 200) {
+        // .localstorage.setitem(‘token’,res.tokenStuff)
+
         props();
         // navigate("/Home");
 

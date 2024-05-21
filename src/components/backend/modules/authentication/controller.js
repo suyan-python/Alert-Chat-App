@@ -63,7 +63,6 @@ const signup = async (req, res) =>
 
         userData.password = await bcrypt.hash(req.body.password, 10);
 
-
         console.log(userData)
         const data = await schema.create(userData);
         res.send({
